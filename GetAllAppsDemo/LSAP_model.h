@@ -8,10 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void(^loadIconResource)(UIImage *icon);
 @interface LSAP_model : NSObject<NSCoding>
 
 @property(nonatomic,strong) NSObject *LSAP_model_instance;
 @property(nonatomic,strong) NSDictionary *dictionary;
+
+
+
+- (void)getIconWithBlock:(loadIconResource)block;
 
 - (BOOL)isAppStoreInstalled;
 - (NSString *)description;
@@ -20,6 +25,8 @@
 - (BOOL)isNowInstalling;
 - (BOOL)isNowInstalled;
 - (NSString *)identifier;
+- (NSString *)localizedName;
+- (NSString *)resourcesDirectoryURL;
 - (instancetype)initWithInstance:(id)arg1;
 - (instancetype)initWithId:(id)arg1;
 @end

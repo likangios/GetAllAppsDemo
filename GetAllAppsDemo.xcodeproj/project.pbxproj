@@ -18,7 +18,12 @@
 		799208F421106BA6009C9DAB /* NSString+base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 799208F021106BA5009C9DAB /* NSString+base64.m */; };
 		799208F521106BA6009C9DAB /* NSUserDefaults+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 799208F221106BA6009C9DAB /* NSUserDefaults+extension.m */; };
 		799208F921106DB2009C9DAB /* MSKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 799208F821106DB1009C9DAB /* MSKeyChain.m */; };
-		799208FB21106E7D009C9DAB /* function.txt in Resources */ = {isa = PBXBuildFile; fileRef = 799208FA21106E7D009C9DAB /* function.txt */; };
+		799208FE211186E4009C9DAB /* AppsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 799208FD211186E4009C9DAB /* AppsCell.m */; };
+		7992090021118D83009C9DAB /* customIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 799208FF21118D83009C9DAB /* customIcon.png */; };
+		799209022111A5E8009C9DAB /* function.txt in Resources */ = {isa = PBXBuildFile; fileRef = 799209012111A5E8009C9DAB /* function.txt */; };
+		799209052111A763009C9DAB /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 799209042111A763009C9DAB /* MainTableViewController.m */; };
+		799209082111B3FD009C9DAB /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 799209072111B3FD009C9DAB /* DetailsViewController.m */; };
+		8CEC66F94A1B3D7F04230F35 /* libPods-GetAllAppsDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E16B2F9760FBC73B298B7246 /* libPods-GetAllAppsDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +48,17 @@
 		799208F621106BC3009C9DAB /* GetAllAppsDemo.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetAllAppsDemo.pch; sourceTree = "<group>"; };
 		799208F721106DB1009C9DAB /* MSKeyChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSKeyChain.h; sourceTree = "<group>"; };
 		799208F821106DB1009C9DAB /* MSKeyChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSKeyChain.m; sourceTree = "<group>"; };
-		799208FA21106E7D009C9DAB /* function.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = function.txt; sourceTree = "<group>"; };
+		799208FC211186E4009C9DAB /* AppsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppsCell.h; sourceTree = "<group>"; };
+		799208FD211186E4009C9DAB /* AppsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppsCell.m; sourceTree = "<group>"; };
+		799208FF21118D83009C9DAB /* customIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = customIcon.png; sourceTree = "<group>"; };
+		799209012111A5E8009C9DAB /* function.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = function.txt; sourceTree = "<group>"; };
+		799209032111A763009C9DAB /* MainTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
+		799209042111A763009C9DAB /* MainTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
+		799209062111B3FD009C9DAB /* DetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
+		799209072111B3FD009C9DAB /* DetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
+		AAF008F8A3CCE29114E6CC43 /* Pods-GetAllAppsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetAllAppsDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-GetAllAppsDemo/Pods-GetAllAppsDemo.release.xcconfig"; sourceTree = "<group>"; };
+		BCD1D83DBA13B0F17A297584 /* Pods-GetAllAppsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetAllAppsDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GetAllAppsDemo/Pods-GetAllAppsDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		E16B2F9760FBC73B298B7246 /* libPods-GetAllAppsDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GetAllAppsDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,17 +66,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CEC66F94A1B3D7F04230F35 /* libPods-GetAllAppsDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B6A4275DEA540AAD12151EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E16B2F9760FBC73B298B7246 /* libPods-GetAllAppsDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		799208C821106B36009C9DAB = {
 			isa = PBXGroup;
 			children = (
 				799208D321106B37009C9DAB /* GetAllAppsDemo */,
 				799208D221106B37009C9DAB /* Products */,
+				8CCF5BF4F0323B4866205FEC /* Pods */,
+				6B6A4275DEA540AAD12151EB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,17 +102,24 @@
 		799208D321106B37009C9DAB /* GetAllAppsDemo */ = {
 			isa = PBXGroup;
 			children = (
+				799208FF21118D83009C9DAB /* customIcon.png */,
 				799208D421106B37009C9DAB /* AppDelegate.h */,
 				799208D521106B37009C9DAB /* AppDelegate.m */,
 				799208D721106B37009C9DAB /* ViewController.h */,
 				799208D821106B37009C9DAB /* ViewController.m */,
+				799209062111B3FD009C9DAB /* DetailsViewController.h */,
+				799209072111B3FD009C9DAB /* DetailsViewController.m */,
+				799209032111A763009C9DAB /* MainTableViewController.h */,
+				799209042111A763009C9DAB /* MainTableViewController.m */,
 				799208F321106BA6009C9DAB /* NSString+base64.h */,
 				799208F021106BA5009C9DAB /* NSString+base64.m */,
+				799208FC211186E4009C9DAB /* AppsCell.h */,
+				799208FD211186E4009C9DAB /* AppsCell.m */,
 				799208F121106BA5009C9DAB /* NSUserDefaults+extension.h */,
 				799208F221106BA6009C9DAB /* NSUserDefaults+extension.m */,
 				799208F721106DB1009C9DAB /* MSKeyChain.h */,
 				799208F821106DB1009C9DAB /* MSKeyChain.m */,
-				799208FA21106E7D009C9DAB /* function.txt */,
+				799209012111A5E8009C9DAB /* function.txt */,
 				799208EA21106B69009C9DAB /* LSAP_model.h */,
 				799208ED21106B69009C9DAB /* LSAP_model.m */,
 				799208EB21106B69009C9DAB /* LSAW_model.h */,
@@ -101,6 +134,15 @@
 			path = GetAllAppsDemo;
 			sourceTree = "<group>";
 		};
+		8CCF5BF4F0323B4866205FEC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BCD1D83DBA13B0F17A297584 /* Pods-GetAllAppsDemo.debug.xcconfig */,
+				AAF008F8A3CCE29114E6CC43 /* Pods-GetAllAppsDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -108,9 +150,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 799208E721106B38009C9DAB /* Build configuration list for PBXNativeTarget "GetAllAppsDemo" */;
 			buildPhases = (
+				98264744D65049B1A4E8D692 /* [CP] Check Pods Manifest.lock */,
 				799208CD21106B37009C9DAB /* Sources */,
 				799208CE21106B37009C9DAB /* Frameworks */,
 				799208CF21106B37009C9DAB /* Resources */,
+				67D71F24DA1F08360CFA1427 /* [CP] Embed Pods Frameworks */,
+				D6B260CA3B90C2B5AFA0956E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -159,13 +204,65 @@
 			buildActionMask = 2147483647;
 			files = (
 				799208E121106B38009C9DAB /* LaunchScreen.storyboard in Resources */,
+				799209022111A5E8009C9DAB /* function.txt in Resources */,
 				799208DE21106B38009C9DAB /* Assets.xcassets in Resources */,
-				799208FB21106E7D009C9DAB /* function.txt in Resources */,
 				799208DC21106B37009C9DAB /* Main.storyboard in Resources */,
+				7992090021118D83009C9DAB /* customIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		67D71F24DA1F08360CFA1427 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GetAllAppsDemo/Pods-GetAllAppsDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98264744D65049B1A4E8D692 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GetAllAppsDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6B260CA3B90C2B5AFA0956E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GetAllAppsDemo/Pods-GetAllAppsDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		799208CD21106B37009C9DAB /* Sources */ = {
@@ -174,11 +271,14 @@
 			files = (
 				799208D921106B37009C9DAB /* ViewController.m in Sources */,
 				799208E421106B38009C9DAB /* main.m in Sources */,
+				799209082111B3FD009C9DAB /* DetailsViewController.m in Sources */,
 				799208EE21106B69009C9DAB /* LSAW_model.m in Sources */,
 				799208F921106DB2009C9DAB /* MSKeyChain.m in Sources */,
 				799208EF21106B69009C9DAB /* LSAP_model.m in Sources */,
+				799208FE211186E4009C9DAB /* AppsCell.m in Sources */,
 				799208F521106BA6009C9DAB /* NSUserDefaults+extension.m in Sources */,
 				799208F421106BA6009C9DAB /* NSString+base64.m in Sources */,
+				799209052111A763009C9DAB /* MainTableViewController.m in Sources */,
 				799208D621106B37009C9DAB /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,6 +417,7 @@
 		};
 		799208E821106B38009C9DAB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCD1D83DBA13B0F17A297584 /* Pods-GetAllAppsDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -336,6 +437,7 @@
 		};
 		799208E921106B38009C9DAB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAF008F8A3CCE29114E6CC43 /* Pods-GetAllAppsDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

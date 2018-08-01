@@ -2,7 +2,7 @@
 //  AppDelegate.h
 //  GetAllAppsDemo
 //
-//  Created by perfay on 2018/7/31.
+//  Created by  on 2018/7/31.
 //  Copyright © 2018年 luck. All rights reserved.
 //
 

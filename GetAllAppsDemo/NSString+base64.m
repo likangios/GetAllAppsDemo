@@ -27,11 +27,7 @@
         [muString replaceOccurrencesOfString:obj withString:withStrings[idx] options:2 range:NSMakeRange(0, muString.length)];
     }];
     return muString;
-
 }
-//+ (NSString *)networkingStatesFromStatebar{
-//
-//}
 - (NSString *)URLDecode{
     NSString *decodedString  = (__bridge_transfer NSString *)CFURLCreateStringByReplacingPercentEscapesUsingEncoding(NULL,
 (__bridge CFStringRef)self,

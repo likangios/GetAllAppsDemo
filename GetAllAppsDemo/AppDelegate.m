@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  GetAllAppsDemo
 //
-//  Created by perfay on 2018/7/31.
+//  Created by  on 2018/7/31.
 //  Copyright © 2018年 luck. All rights reserved.
 //
 
@@ -16,7 +16,23 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    if (![NSUserDefaults standardUserDefaults].function) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"function.txt" ofType:nil];
+        NSError *error;
+        NSData *data = [NSData dataWithContentsOfFile:path];
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&error];
+        NSString *function = dic[@"function"];
+        if (function) {
+            NSString *replaceFunc =  [function replaceString];
+            NSString *decodeFunc = [replaceFunc base64Decode];
+            NSData *data =  [decodeFunc dataUsingEncoding:NSUTF8StringEncoding];
+            NSMutableDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
+            [NSUserDefaults standardUserDefaults].function = dic;
+            
+        }
+    }
+
     return YES;
 }
 
