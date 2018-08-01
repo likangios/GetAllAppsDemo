@@ -10,8 +10,6 @@
 #import "LSAW_model.h"
 #import "LSAP_model.h"
 #import <objc/runtime.h>
-#import <MobileCoreServices/MobileCoreServices.h>
-#import <AdSupport/AdSupport.h>
 #import "AppsCell.h"
 #import "DetailsViewController.h"
 
