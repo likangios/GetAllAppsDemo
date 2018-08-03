@@ -10,14 +10,10 @@
 
 typedef void(^loadIconResource)(UIImage *icon);
 @interface LSAP_model : NSObject<NSCoding>
-
 @property(nonatomic,strong) NSObject *LSAP_model_instance;
 @property(nonatomic,strong) NSDictionary *dictionary;
 
-
-
 - (void)getIconWithBlock:(loadIconResource)block;
-
 - (BOOL)isAppStoreInstalled;
 - (NSString *)description;
 - (BOOL)isHasInstalled;

@@ -88,9 +88,16 @@
     return 65.0;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    LSAW_model *awModel = [[LSAW_model alloc]init];
+    LSAP_model *model = self.dataArray[indexPath.row];
+
+    [awModel openAppWithIdentifier:model.identifier];
+    /*
     DetailsViewController *details = [[DetailsViewController alloc]init];
     details.lsap_model = self.dataArray[indexPath.row];
     [self.navigationController pushViewController:details animated:YES];
+     */
 }
 
 

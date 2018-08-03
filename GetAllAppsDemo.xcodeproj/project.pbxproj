@@ -102,6 +102,7 @@
 		799208D321106B37009C9DAB /* GetAllAppsDemo */ = {
 			isa = PBXGroup;
 			children = (
+				799209092112D9D1009C9DAB /* lib */,
 				799208FF21118D83009C9DAB /* customIcon.png */,
 				799208D421106B37009C9DAB /* AppDelegate.h */,
 				799208D521106B37009C9DAB /* AppDelegate.m */,
@@ -111,19 +112,8 @@
 				799209072111B3FD009C9DAB /* DetailsViewController.m */,
 				799209032111A763009C9DAB /* MainTableViewController.h */,
 				799209042111A763009C9DAB /* MainTableViewController.m */,
-				799208F321106BA6009C9DAB /* NSString+base64.h */,
-				799208F021106BA5009C9DAB /* NSString+base64.m */,
 				799208FC211186E4009C9DAB /* AppsCell.h */,
 				799208FD211186E4009C9DAB /* AppsCell.m */,
-				799208F121106BA5009C9DAB /* NSUserDefaults+extension.h */,
-				799208F221106BA6009C9DAB /* NSUserDefaults+extension.m */,
-				799208F721106DB1009C9DAB /* MSKeyChain.h */,
-				799208F821106DB1009C9DAB /* MSKeyChain.m */,
-				799209012111A5E8009C9DAB /* function.txt */,
-				799208EA21106B69009C9DAB /* LSAP_model.h */,
-				799208ED21106B69009C9DAB /* LSAP_model.m */,
-				799208EB21106B69009C9DAB /* LSAW_model.h */,
-				799208EC21106B69009C9DAB /* LSAW_model.m */,
 				799208F621106BC3009C9DAB /* GetAllAppsDemo.pch */,
 				799208DA21106B37009C9DAB /* Main.storyboard */,
 				799208DD21106B38009C9DAB /* Assets.xcassets */,
@@ -132,6 +122,24 @@
 				799208E321106B38009C9DAB /* main.m */,
 			);
 			path = GetAllAppsDemo;
+			sourceTree = "<group>";
+		};
+		799209092112D9D1009C9DAB /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				799208F321106BA6009C9DAB /* NSString+base64.h */,
+				799208F021106BA5009C9DAB /* NSString+base64.m */,
+				799209012111A5E8009C9DAB /* function.txt */,
+				799208F121106BA5009C9DAB /* NSUserDefaults+extension.h */,
+				799208F221106BA6009C9DAB /* NSUserDefaults+extension.m */,
+				799208F721106DB1009C9DAB /* MSKeyChain.h */,
+				799208F821106DB1009C9DAB /* MSKeyChain.m */,
+				799208EA21106B69009C9DAB /* LSAP_model.h */,
+				799208ED21106B69009C9DAB /* LSAP_model.m */,
+				799208EB21106B69009C9DAB /* LSAW_model.h */,
+				799208EC21106B69009C9DAB /* LSAW_model.m */,
+			);
+			path = lib;
 			sourceTree = "<group>";
 		};
 		8CCF5BF4F0323B4866205FEC /* Pods */ = {
