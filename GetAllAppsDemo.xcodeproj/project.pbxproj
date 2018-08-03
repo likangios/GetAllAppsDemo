@@ -428,8 +428,9 @@
 			baseConfigurationReference = BCD1D83DBA13B0F17A297584 /* Pods-GetAllAppsDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = E5EJ3R9VNE;
+				DEVELOPMENT_TEAM = AC3QX9VJ78;
 				GCC_PREFIX_HEADER = GetAllAppsDemo/GetAllAppsDemo.pch;
 				INFOPLIST_FILE = GetAllAppsDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -439,6 +440,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.luck.luck.GetAllAppsDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -448,8 +450,9 @@
 			baseConfigurationReference = AAF008F8A3CCE29114E6CC43 /* Pods-GetAllAppsDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = E5EJ3R9VNE;
+				DEVELOPMENT_TEAM = AC3QX9VJ78;
 				GCC_PREFIX_HEADER = GetAllAppsDemo/GetAllAppsDemo.pch;
 				INFOPLIST_FILE = GetAllAppsDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -459,6 +462,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.luck.luck.GetAllAppsDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

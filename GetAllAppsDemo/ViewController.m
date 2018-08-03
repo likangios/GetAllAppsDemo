@@ -13,6 +13,8 @@
 #import "AppsCell.h"
 #import "DetailsViewController.h"
 
+
+
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic,strong) UITableView  *tableView;
@@ -21,6 +23,30 @@
 @end
 
 @implementation ViewController
+
+#define XOR_KEY 0xBB
+void xorString(unsigned char *str, unsigned char key)
+{
+    unsigned char *p = str;
+    while( ((*p) ^=  key) != '\0')  p++;
+}
+
+- (NSString *)toeknNew_key
+{
+    unsigned char str[] = {(XOR_KEY ^ 'w'),//welcome
+        (XOR_KEY ^ 'e'),
+        (XOR_KEY ^ 'l'),
+        (XOR_KEY ^ 'c'),
+        (XOR_KEY ^ 'o'),
+        (XOR_KEY ^ 'm'),
+        (XOR_KEY ^ 'e'),
+        (XOR_KEY ^ '\0')};
+    xorString(str, XOR_KEY);
+    int count = strlen(str);
+    static unsigned char result[7];
+    memcpy(result, str, 7);
+    return [NSString stringWithFormat:@"%s",result];      //输出: welcome
+}
 
 - (UITableView *)tableView{
     if (!_tableView) {
@@ -57,6 +83,10 @@
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
     }];
+    if ([[self toeknNew_key] isEqualToString:@"asfsdfa"]) {
+        self.view.backgroundColor = [UIColor redColor];
+    }
+    
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.dataArray.count;
