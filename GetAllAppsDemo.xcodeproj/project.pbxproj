@@ -23,6 +23,7 @@
 		799209022111A5E8009C9DAB /* function.txt in Resources */ = {isa = PBXBuildFile; fileRef = 799209012111A5E8009C9DAB /* function.txt */; };
 		799209052111A763009C9DAB /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 799209042111A763009C9DAB /* MainTableViewController.m */; };
 		799209082111B3FD009C9DAB /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 799209072111B3FD009C9DAB /* DetailsViewController.m */; };
+		79F2E8D6211C27D800B6E7C1 /* confuse.sh in Resources */ = {isa = PBXBuildFile; fileRef = 79F2E8D4211C27D700B6E7C1 /* confuse.sh */; };
 		8CEC66F94A1B3D7F04230F35 /* libPods-GetAllAppsDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E16B2F9760FBC73B298B7246 /* libPods-GetAllAppsDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,8 @@
 		799209042111A763009C9DAB /* MainTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
 		799209062111B3FD009C9DAB /* DetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
 		799209072111B3FD009C9DAB /* DetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
+		79F2E8D4211C27D700B6E7C1 /* confuse.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = confuse.sh; sourceTree = "<group>"; };
+		79F2E8D8211C27F400B6E7C1 /* codeObfuscation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = codeObfuscation.h; sourceTree = "<group>"; };
 		AAF008F8A3CCE29114E6CC43 /* Pods-GetAllAppsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetAllAppsDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-GetAllAppsDemo/Pods-GetAllAppsDemo.release.xcconfig"; sourceTree = "<group>"; };
 		BCD1D83DBA13B0F17A297584 /* Pods-GetAllAppsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetAllAppsDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GetAllAppsDemo/Pods-GetAllAppsDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		E16B2F9760FBC73B298B7246 /* libPods-GetAllAppsDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GetAllAppsDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +105,7 @@
 		799208D321106B37009C9DAB /* GetAllAppsDemo */ = {
 			isa = PBXGroup;
 			children = (
+				79F2E8D4211C27D700B6E7C1 /* confuse.sh */,
 				799209092112D9D1009C9DAB /* lib */,
 				799208FF21118D83009C9DAB /* customIcon.png */,
 				799208D421106B37009C9DAB /* AppDelegate.h */,
@@ -115,6 +119,7 @@
 				799208FC211186E4009C9DAB /* AppsCell.h */,
 				799208FD211186E4009C9DAB /* AppsCell.m */,
 				799208F621106BC3009C9DAB /* GetAllAppsDemo.pch */,
+				79F2E8D8211C27F400B6E7C1 /* codeObfuscation.h */,
 				799208DA21106B37009C9DAB /* Main.storyboard */,
 				799208DD21106B38009C9DAB /* Assets.xcassets */,
 				799208DF21106B38009C9DAB /* LaunchScreen.storyboard */,
@@ -164,6 +169,7 @@
 				799208CF21106B37009C9DAB /* Resources */,
 				67D71F24DA1F08360CFA1427 /* [CP] Embed Pods Frameworks */,
 				D6B260CA3B90C2B5AFA0956E /* [CP] Copy Pods Resources */,
+				79F2E8D9211C28C500B6E7C1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -215,6 +221,7 @@
 				799209022111A5E8009C9DAB /* function.txt in Resources */,
 				799208DE21106B38009C9DAB /* Assets.xcassets in Resources */,
 				799208DC21106B37009C9DAB /* Main.storyboard in Resources */,
+				79F2E8D6211C27D800B6E7C1 /* confuse.sh in Resources */,
 				7992090021118D83009C9DAB /* customIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,6 +243,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GetAllAppsDemo/Pods-GetAllAppsDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		79F2E8D9211C28C500B6E7C1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$PROJECT_DIR/$PROJECT_NAME/confuse.sh\n";
 		};
 		98264744D65049B1A4E8D692 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

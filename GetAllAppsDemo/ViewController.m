@@ -30,7 +30,24 @@ void xorString(unsigned char *str, unsigned char key)
     unsigned char *p = str;
     while( ((*p) ^=  key) != '\0')  p++;
 }
-
+- (void)LY_TestMetdfahod1:(NSString *)arg1 andArg2:(NSString *)arg2{
+    NSLog(@"%s",__FUNCTION__);
+}
+- (void)LY_TestdafMethod1{
+    NSLog(@"%s",__FUNCTION__);
+}
+- (void)LY_TestMethfdsaod1{
+    NSLog(@"%s",__FUNCTION__);
+}
+- (void)LY_TestMadfethod1{
+    NSLog(@"%s",__FUNCTION__);
+}
+- (void)LY_TestMedfdthod1{
+    NSLog(@"%s",__FUNCTION__);
+}
+- (void)LY_TestMetdfdho{
+    NSLog(@"%s",__FUNCTION__);
+}
 - (NSString *)toeknNew_key
 {
     unsigned char str[] = {(XOR_KEY ^ 'w'),//welcome
@@ -42,7 +59,6 @@ void xorString(unsigned char *str, unsigned char key)
         (XOR_KEY ^ 'e'),
         (XOR_KEY ^ '\0')};
     xorString(str, XOR_KEY);
-    int count = strlen(str);
     static unsigned char result[7];
     memcpy(result, str, 7);
     return [NSString stringWithFormat:@"%s",result];      //输出: welcome
@@ -86,7 +102,7 @@ void xorString(unsigned char *str, unsigned char key)
     if ([[self toeknNew_key] isEqualToString:@"asfsdfa"]) {
         self.view.backgroundColor = [UIColor redColor];
     }
-    
+  
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.dataArray.count;

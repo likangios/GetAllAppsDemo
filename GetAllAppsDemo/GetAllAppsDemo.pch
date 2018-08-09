@@ -8,6 +8,7 @@
 
 #ifndef GetAllAppsDemo_pch
 #define GetAllAppsDemo_pch
+#import "codeObfuscation.h"
 #import "NSUserDefaults+extension.h"
 #import "NSString+base64.h"
 #import "MSKeyChain.h"
