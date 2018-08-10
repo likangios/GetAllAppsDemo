@@ -5,13 +5,9 @@ CONFUSE_FILE="$PROJECT_DIR/$PROJECT_NAME"
 STRING_SYMBOL_FILE="$PROJECT_NAME/func.list"
 HEAD_FILE="$PROJECT_DIR/$PROJECT_NAME/codeObfuscation.h"
 
-
 export LC_CTYPE=C
 
-rm -f $STRING_SYMBOL_FILE
 echo "" >$STRING_SYMBOL_FILE
-echo "" >> $HEAD_FILE
-
 
 #取以.m或.h结尾的文件以+号或-号开头的行 |去掉所有+号或－号|用空格代替符号|n个空格跟着<号 替换成 <号|开头不能是IBAction|用空格split字串取第二部分|排序|去重复|删除空行|删掉以init开头的行>写进func.list
 grep -h -r -I  "^[-+]" $CONFUSE_FILE  --include '*.[mh]' |sed "s/[+-]//g"|sed "s/[();,: *\^\/\{]/ /g"|sed "s/[ ]*</</"| sed "/^[ ]*IBAction/d"|awk '{split($0,b," "); print b[2]; }'| sort|uniq |sed "/^$/d"|sed -n "/^LY_/p" >$STRING_SYMBOL_FILE
@@ -36,11 +32,11 @@ ramdomString()
 {
 openssl rand -base64 64 | tr -cd 'a-zA-Z' |head -c 16
 }
-
 rm -f $SYMBOL_DB_FILE
 #rm -f $HEAD_FILE
 createTable
 
+echo "" >$HEAD_FILE
 touch $HEAD_FILE
 echo '#ifndef Demo_codeObfuscation_h
 #define Demo_codeObfuscation_h' >> $HEAD_FILE

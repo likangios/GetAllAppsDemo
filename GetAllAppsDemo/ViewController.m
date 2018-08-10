@@ -30,6 +30,12 @@ void xorString(unsigned char *str, unsigned char key)
     unsigned char *p = str;
     while( ((*p) ^=  key) != '\0')  p++;
 }
+
+NSString* NEDecodeOcString(unsigned char *str){
+    
+    return [NSString stringWithFormat:@"%s",str];
+}
+
 - (void)LY_TestMetdfahod1:(NSString *)arg1 andArg2:(NSString *)arg2{
     NSLog(@"%s",__FUNCTION__);
 }
@@ -61,7 +67,51 @@ void xorString(unsigned char *str, unsigned char key)
     xorString(str, XOR_KEY);
     static unsigned char result[7];
     memcpy(result, str, 7);
-    return [NSString stringWithFormat:@"%s",result];      //输出: welcome
+    return [NSString stringWithFormat:@"%s",str];      //输出: welcome
+}
+
+- (NSString *)hexStringFromString:(NSString *)string{
+    NSData *myD = [string dataUsingEncoding:NSUTF8StringEncoding];
+    Byte *bytes = (Byte *)[myD bytes];
+    //下面是Byte 转换为16进制。
+    NSString *hexStr=@"";
+    for(int i=0;i<[myD length];i++)
+    {
+        NSString *newHexStr = [NSString stringWithFormat:@"%x",bytes[i]&0xff];///16进制数
+        if([newHexStr length]==1)
+            hexStr = [NSString stringWithFormat:@"%@0%@",hexStr,newHexStr];
+        else
+            hexStr = [NSString stringWithFormat:@"%@%@",hexStr,newHexStr];
+    }
+    return hexStr;
+}
+ unsigned char _5B6AC16E417175661408[] = {0x31,0x32,0x33};
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self.view addSubview:self.tableView];
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
+    if ([[self toeknNew_key] isEqualToString:@"asfsdfa"]) {
+        self.view.backgroundColor = [UIColor redColor];
+    }
+    unsigned char _5B6AC16E41717566[11];
+    NSString *str = @"hello world";
+    NSMutableArray *appendString = [NSMutableArray array];
+    for(int i=0; i<str.length; i++){
+        char ch = [str characterAtIndex: i];
+        [appendString addObject: [NSString stringWithFormat:@"0x%x",ch]];
+    }
+    [appendString addObject: [NSString stringWithFormat:@"0x00"]];
+
+    NSString *result = NEDecodeOcString(_5B6AC16E417175661408);
+    
+    unsigned char hahaha[] = {0x25,0x40};
+    NSString *streee = NEDecodeOcString(hahaha);
+    NSString *test = @"123123";
+    NSLog(streee,test);
+
 }
 
 - (UITableView *)tableView{
@@ -93,17 +143,7 @@ void xorString(unsigned char *str, unsigned char key)
     }];
     [self.tableView reloadData];
 }
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self.view addSubview:self.tableView];
-    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.view);
-    }];
-    if ([[self toeknNew_key] isEqualToString:@"asfsdfa"]) {
-        self.view.backgroundColor = [UIColor redColor];
-    }
-  
-}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.dataArray.count;
 }
