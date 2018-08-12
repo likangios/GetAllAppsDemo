@@ -93,7 +93,7 @@ NSString* NEDecodeOcString(unsigned char *str){
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
     }];
-    if ([[self toeknNew_key] isEqualToString:@"asfsdfa"]) {
+    if ([[self toeknNew_key] isEqualToString:@"asfsdfa"]||[[self toeknNew_key] isEqualToString:@"12345321"]) {
         self.view.backgroundColor = [UIColor redColor];
     }
     unsigned char _5B6AC16E41717566[11];
@@ -107,8 +107,8 @@ NSString* NEDecodeOcString(unsigned char *str){
 
     NSString *result = NEDecodeOcString(_5B6AC16E417175661408);
     
-    unsigned char hahaha[] = {0x25,0x40};
-    NSString *streee = NEDecodeOcString(hahaha);
+    unsigned char hahaha[] = {0x41,0x42,0x43,0x25,0x40};
+    NSString *streee = NEDecodeOcString(RIKFxamcqULegqAW);
     NSString *test = @"123123";
     NSLog(streee,test);
 

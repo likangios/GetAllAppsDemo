@@ -11,7 +11,7 @@ export LC_CTYPE=C
 
 #rgrep  -h -r  "@\"" $CONFUSE_FILE --include '*.[m]' >$STRING_SYMBOL_FILE
 
-grep -h -r -I  "@\"[0-9a-zA-Z]" $CONFUSE_FILE --include '*.[m]'| sed "s/.*\(@\".*\"\).*/\1/g" | sort|uniq |sed "/^$/d"  >$STRING_SYMBOL_FILE
+grep -h -r -I  "@\"[0-9a-zA-Z]" $CONFUSE_FILE --include '*.[m]'| sed "s/.*\(@\".*\"\).*/\1/g" | sort | uniq |sed "/^$/d"  >$STRING_SYMBOL_FILE
 #grep -h -r -I   $CONFUSE_FILE --include '*.[m]' |sed "s/*@/@/g"   >$STRING_SYMBOL_FILE
 
 #grep -h -r -I  "^[-+]" $CONFUSE_FILE  --include '*.[mh]' >$STRING_SYMBOL_FILE
@@ -37,6 +37,9 @@ openssl rand -base64 64 | tr -cd 'a-zA-Z' |head -c 16
 }
 
 echo "" >$HEAD_FILE
+
+
+
 touch $HEAD_FILE
 
 cat "$STRING_SYMBOL_FILE" | while read -ra line; do
