@@ -113,6 +113,33 @@ NSString* NEDecodeOcString(unsigned char *str){
     NSLog(streee,test);
 
 }
+/*
+ #!/bin/bash
+ str="love you jingjing"
+ 
+ testMethod (){
+ param=$*
+ array=()
+ testStr=""
+ echo ${#param}
+ for ((i=1;i<=${#param};i++));
+ do
+ st=${param:i-1:1}
+ echo -e $st
+ #echo $st| tr -d "\n" | od -An -t dC
+ #echo $asciiSt
+ #echo "obase=16;asciiSt"|bc
+ #echo $((16#${st}))
+ array[i]=${param:i-1:1}
+ testStr="$testStr"${param:i-1:1}
+ #echo $testStr
+ done
+ }
+ #num="16"
+ #echo $((16#${num}))
+ testMethod $str
+
+ */
 
 - (UITableView *)tableView{
     if (!_tableView) {

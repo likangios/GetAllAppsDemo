@@ -31,6 +31,7 @@ grep -h -r -I  "@\"[0-9a-zA-Z]" $CONFUSE_FILE --include '*.[m]'| sed "s/.*\(@\".
 #grep -h -r -I  "^[-+]" $CONFUSE_FILE  --include '*.[mh]' |sed "s/[+-]//g"|sed "s/[();,: *\^\/\{]/ /g"|sed "s/[ ]*</</"| sed "/^[ ]*IBAction/d"|awk '{split($0,b," "); print b[2]; }'| sort|uniq |sed "/^$/d"|sed -n "/^LY_/p" >$STRING_SYMBOL_FILE
 
 
+
 ramdomString()
 {
 openssl rand -base64 64 | tr -cd 'a-zA-Z' |head -c 16
