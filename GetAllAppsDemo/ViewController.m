@@ -31,8 +31,12 @@ void xorString(unsigned char *str, unsigned char key)
     while( ((*p) ^=  key) != '\0')  p++;
 }
 
-NSString* NEDecodeOcString(unsigned char *str){
-    
+NSString* NEDecodeOcString(unsigned char str[]){
+   int count = (int)sizeof(&str);
+    for(int i= 0; i < count ;i++){
+        str[i] ^= XOR_KEY ;
+        NSLog(@"%c",str[i]);
+    }
     return [NSString stringWithFormat:@"%s",str];
 }
 
@@ -93,7 +97,7 @@ NSString* NEDecodeOcString(unsigned char *str){
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
     }];
-    if ([[self toeknNew_key] isEqualToString:@"asfsdfa"]||[[self toeknNew_key] isEqualToString:@"12345321"]) {
+    if ([[self toeknNew_key] isEqualToString:@"/api/login"]||[[self toeknNew_key] isEqualToString:@"12345321"]) {
         self.view.backgroundColor = [UIColor redColor];
     }
     unsigned char _5B6AC16E41717566[11];
@@ -105,10 +109,10 @@ NSString* NEDecodeOcString(unsigned char *str){
     }
     [appendString addObject: [NSString stringWithFormat:@"0x00"]];
 
-    NSString *result = NEDecodeOcString(_5B6AC16E417175661408);
+//    NSString *result = NEDecodeOcString(_5B6AC16E417175661408);
     
     unsigned char hahaha[] = {0x41,0x42,0x43,0x25,0x40};
-    NSString *streee = NEDecodeOcString(RIKFxamcqULegqAW);
+    NSString *streee = NEDecodeOcString(NUyLNcNSCfzHMQBX);
     NSString *test = @"123123";
     NSLog(streee,test);
 
@@ -116,7 +120,7 @@ NSString* NEDecodeOcString(unsigned char *str){
 /*
  #!/bin/bash
  str="love you jingjing"
- 
+
  testMethod (){
  param=$*
  array=()
