@@ -23,128 +23,34 @@
 @end
 
 @implementation ViewController
-
 #define XOR_KEY 0xBB
-void xorString(unsigned char *str, unsigned char key)
-{
-    unsigned char *p = str;
-    while( ((*p) ^=  key) != '\0')  p++;
-}
-
-NSString* NEDecodeOcString(unsigned char str[]){
-   int count = (int)sizeof(&str);
-    for(int i= 0; i < count ;i++){
-        str[i] ^= XOR_KEY ;
-        NSLog(@"%c",str[i]);
+NSString* NEDecodeOcString(char str[],size_t lenght){
+    unsigned char result[lenght];
+    memcpy(result, str, lenght);
+    unsigned char *p = result;
+    for(int i= 0; i < lenght ;i++){
+        (*p) ^=  XOR_KEY;
+        p++;
     }
-    return [NSString stringWithFormat:@"%s",str];
+    NSString *content = [[NSString stringWithFormat:@"%s",result] substringToIndex:lenght];
+    return content;
 }
-
-- (void)LY_TestMetdfahod1:(NSString *)arg1 andArg2:(NSString *)arg2{
-    NSLog(@"%s",__FUNCTION__);
-}
-- (void)LY_TestdafMethod1{
-    NSLog(@"%s",__FUNCTION__);
-}
-- (void)LY_TestMethfdsaod1{
-    NSLog(@"%s",__FUNCTION__);
-}
-- (void)LY_TestMadfethod1{
-    NSLog(@"%s",__FUNCTION__);
-}
-- (void)LY_TestMedfdthod1{
-    NSLog(@"%s",__FUNCTION__);
-}
-- (void)LY_TestMetdfdho{
-    NSLog(@"%s",__FUNCTION__);
-}
-- (NSString *)toeknNew_key
-{
-    unsigned char str[] = {(XOR_KEY ^ 'w'),//welcome
-        (XOR_KEY ^ 'e'),
-        (XOR_KEY ^ 'l'),
-        (XOR_KEY ^ 'c'),
-        (XOR_KEY ^ 'o'),
-        (XOR_KEY ^ 'm'),
-        (XOR_KEY ^ 'e'),
-        (XOR_KEY ^ '\0')};
-    xorString(str, XOR_KEY);
-    static unsigned char result[7];
-    memcpy(result, str, 7);
-    return [NSString stringWithFormat:@"%s",str];      //输出: welcome
-}
-
-- (NSString *)hexStringFromString:(NSString *)string{
-    NSData *myD = [string dataUsingEncoding:NSUTF8StringEncoding];
-    Byte *bytes = (Byte *)[myD bytes];
-    //下面是Byte 转换为16进制。
-    NSString *hexStr=@"";
-    for(int i=0;i<[myD length];i++)
-    {
-        NSString *newHexStr = [NSString stringWithFormat:@"%x",bytes[i]&0xff];///16进制数
-        if([newHexStr length]==1)
-            hexStr = [NSString stringWithFormat:@"%@0%@",hexStr,newHexStr];
-        else
-            hexStr = [NSString stringWithFormat:@"%@%@",hexStr,newHexStr];
-    }
-    return hexStr;
-}
- unsigned char _5B6AC16E417175661408[] = {0x31,0x32,0x33};
-
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    NSString *token = [self toeknNew_key];
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
     }];
-    if ([[self toeknNew_key] isEqualToString:@"/api/login"]||[[self toeknNew_key] isEqualToString:@"12345321"]) {
+    NSString *testStr = @"haha";
+    if ([[self toeknNew_key] isEqualToString:@"/api/login"]) {
         self.view.backgroundColor = [UIColor redColor];
     }
-    unsigned char _5B6AC16E41717566[11];
     NSString *str = @"hello world";
-    NSMutableArray *appendString = [NSMutableArray array];
-    for(int i=0; i<str.length; i++){
-        char ch = [str characterAtIndex: i];
-        [appendString addObject: [NSString stringWithFormat:@"0x%x",ch]];
-    }
-    [appendString addObject: [NSString stringWithFormat:@"0x00"]];
-
-//    NSString *result = NEDecodeOcString(_5B6AC16E417175661408);
-    
-    unsigned char hahaha[] = {0x41,0x42,0x43,0x25,0x40};
-    NSString *streee = NEDecodeOcString(NUyLNcNSCfzHMQBX);
     NSString *test = @"123123";
-    NSLog(streee,test);
-
+    NSLog(test);
 }
-/*
- #!/bin/bash
- str="love you jingjing"
-
- testMethod (){
- param=$*
- array=()
- testStr=""
- echo ${#param}
- for ((i=1;i<=${#param};i++));
- do
- st=${param:i-1:1}
- echo -e $st
- #echo $st| tr -d "\n" | od -An -t dC
- #echo $asciiSt
- #echo "obase=16;asciiSt"|bc
- #echo $((16#${st}))
- array[i]=${param:i-1:1}
- testStr="$testStr"${param:i-1:1}
- #echo $testStr
- done
- }
- #num="16"
- #echo $((16#${num}))
- testMethod $str
-
- */
-
 - (UITableView *)tableView{
     if (!_tableView) {
         _tableView = [[UITableView alloc]init];
@@ -224,5 +130,42 @@ NSString* NEDecodeOcString(unsigned char str[]){
     // Dispose of any resources that can be recreated.
 }
 
-
+- (NSString *)toeknNew_key
+{
+    unsigned char str[] = {(XOR_KEY ^ 'w'),//welcome
+        (XOR_KEY ^ 'e'),
+        (XOR_KEY ^ 'l'),
+        (XOR_KEY ^ 'c'),
+        (XOR_KEY ^ 'o'),
+        (XOR_KEY ^ 'm'),
+        (XOR_KEY ^ 'e'),
+        (XOR_KEY ^ '\0')};
+    xorString(str, XOR_KEY);
+    static unsigned char result[7];
+    memcpy(result, str, 7);
+    return [NSString stringWithFormat:@"%s",str];      //输出: welcome
+}
+void xorString(unsigned char *str, unsigned char key)
+{
+    unsigned char *p = str;
+    while( ((*p) ^=  key) != '\0')  p++;
+}
+- (void)LY_TestMetdfahod1:(NSString *)arg1 andArg2:(NSString *)arg2{
+    NSLog(@"%s",__FUNCTION__);
+}
+- (void)LY_TestdafMethod1{
+    NSLog(@"%s",__FUNCTION__);
+}
+- (void)LY_TestMethfdsaod1{
+    NSLog(@"%s",__FUNCTION__);
+}
+- (void)LY_TestMadfethod1{
+    NSLog(@"%s",__FUNCTION__);
+}
+- (void)LY_TestMedfdthod1{
+    NSLog(@"%s",__FUNCTION__);
+}
+- (void)LY_TestMetdfdho{
+    NSLog(@"%s",__FUNCTION__);
+}
 @end
