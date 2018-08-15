@@ -15,6 +15,7 @@
 
 
 
+
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic,strong) UITableView  *tableView;
@@ -22,19 +23,10 @@
 
 @end
 
-@implementation ViewController
 #define XOR_KEY 0xBB
-NSString* NEDecodeOcString(char str[],size_t lenght){
-    unsigned char result[lenght];
-    memcpy(result, str, lenght);
-    unsigned char *p = result;
-    for(int i= 0; i < lenght ;i++){
-        (*p) ^=  XOR_KEY;
-        p++;
-    }
-    NSString *content = [[NSString stringWithFormat:@"%s",result] substringToIndex:lenght];
-    return content;
-}
+
+@implementation ViewController
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -50,6 +42,7 @@ NSString* NEDecodeOcString(char str[],size_t lenght){
     NSString *str = @"hello world";
     NSString *test = @"123123";
     NSLog(test);
+    NSLog(@"===+%@dfdsa<<<%@",str,test);
 }
 - (UITableView *)tableView{
     if (!_tableView) {

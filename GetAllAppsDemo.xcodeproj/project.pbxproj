@@ -59,15 +59,12 @@
 		799209022111A5E8009C9DAB /* function.txt in Resources */ = {isa = PBXBuildFile; fileRef = 799209012111A5E8009C9DAB /* function.txt */; };
 		799209052111A763009C9DAB /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 799209042111A763009C9DAB /* MainTableViewController.m */; };
 		799209082111B3FD009C9DAB /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 799209072111B3FD009C9DAB /* DetailsViewController.m */; };
-		79E9BEC6211D41A60035D1C6 /* DecodeStringlist.list in Resources */ = {isa = PBXBuildFile; fileRef = 79E9BEC5211D41A60035D1C6 /* DecodeStringlist.list */; };
+		79E14F742123D15F001736B0 /* CRC.c in Sources */ = {isa = PBXBuildFile; fileRef = 79E14F732123D15F001736B0 /* CRC.c */; };
 		8CEC66F94A1B3D7F04230F35 /* libPods-GetAllAppsDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E16B2F9760FBC73B298B7246 /* libPods-GetAllAppsDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		792BD4CC21217DA500C86064 /* otherfilename.list */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = otherfilename.list; sourceTree = "<group>"; };
-		792BD4CD21217DA500C86064 /* testFileName.list */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = testFileName.list; sourceTree = "<group>"; };
 		792BD4D22121911400C86064 /* replace.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = replace.sh; sourceTree = "<group>"; };
-		792BD4D421226D1500C86064 /* DecodeStringMethod.list */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DecodeStringMethod.list; sourceTree = "<group>"; };
 		792BD4D52122702800C86064 /* restore.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = restore.sh; sourceTree = "<group>"; };
 		799208D121106B37009C9DAB /* GetAllAppsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetAllAppsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		799208D421106B37009C9DAB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -100,8 +97,11 @@
 		799209072111B3FD009C9DAB /* DetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
 		79E14F662122C7A4001736B0 /* DecodeString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecodeString.h; sourceTree = "<group>"; };
 		79E14F672122C7A4001736B0 /* codeObfuscation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = codeObfuscation.h; sourceTree = "<group>"; };
-		79E14F692122E178001736B0 /* tropStringMethod.list */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tropStringMethod.list; sourceTree = "<group>"; };
-		79E9BEC5211D41A60035D1C6 /* DecodeStringlist.list */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DecodeStringlist.list; sourceTree = "<group>"; };
+		79E14F722123D15F001736B0 /* CRC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRC.h; sourceTree = "<group>"; };
+		79E14F732123D15F001736B0 /* CRC.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = CRC.c; sourceTree = "<group>"; };
+		79E14F762123D6AB001736B0 /* DecodeStringlist.list */ = {isa = PBXFileReference; lastKnownFileType = text; name = DecodeStringlist.list; path = GetAllAppsDemo/DecodeStringlist.list; sourceTree = SOURCE_ROOT; };
+		79E14F772123D6AC001736B0 /* DecodeStringMethod.list */ = {isa = PBXFileReference; lastKnownFileType = text; name = DecodeStringMethod.list; path = GetAllAppsDemo/DecodeStringMethod.list; sourceTree = SOURCE_ROOT; };
+		79E14F7B2123FA46001736B0 /* func.list */ = {isa = PBXFileReference; lastKnownFileType = text; name = func.list; path = GetAllAppsDemo/func.list; sourceTree = SOURCE_ROOT; };
 		79F2E8E1211D242000B6E7C1 /* confuse.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = confuse.sh; sourceTree = "<group>"; };
 		79F2E8E3211D2F3900B6E7C1 /* FirstScript.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = FirstScript.sh; sourceTree = "<group>"; };
 		AAF008F8A3CCE29114E6CC43 /* Pods-GetAllAppsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetAllAppsDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-GetAllAppsDemo/Pods-GetAllAppsDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -167,21 +167,15 @@
 		799208D321106B37009C9DAB /* GetAllAppsDemo */ = {
 			isa = PBXGroup;
 			children = (
+				79E14F752123D57F001736B0 /* sh */,
 				792BD4DB2122C32000C86064 /* Module */,
-				792BD4CC21217DA500C86064 /* otherfilename.list */,
-				792BD4CD21217DA500C86064 /* testFileName.list */,
-				79E9BEC5211D41A60035D1C6 /* DecodeStringlist.list */,
-				792BD4D421226D1500C86064 /* DecodeStringMethod.list */,
-				79E14F692122E178001736B0 /* tropStringMethod.list */,
-				79F2E8E3211D2F3900B6E7C1 /* FirstScript.sh */,
-				792BD4D22121911400C86064 /* replace.sh */,
-				792BD4D52122702800C86064 /* restore.sh */,
-				79F2E8E1211D242000B6E7C1 /* confuse.sh */,
 				799209092112D9D1009C9DAB /* lib */,
 				799208FF21118D83009C9DAB /* customIcon.png */,
 				799208DA21106B37009C9DAB /* Main.storyboard */,
 				799208DD21106B38009C9DAB /* Assets.xcassets */,
 				799208DF21106B38009C9DAB /* LaunchScreen.storyboard */,
+				79E14F722123D15F001736B0 /* CRC.h */,
+				79E14F732123D15F001736B0 /* CRC.c */,
 				79E14F672122C7A4001736B0 /* codeObfuscation.h */,
 				79E14F662122C7A4001736B0 /* DecodeString.h */,
 				799208F621106BC3009C9DAB /* GetAllAppsDemo.pch */,
@@ -207,6 +201,20 @@
 				799208EC21106B69009C9DAB /* LSAW_model.m */,
 			);
 			path = lib;
+			sourceTree = "<group>";
+		};
+		79E14F752123D57F001736B0 /* sh */ = {
+			isa = PBXGroup;
+			children = (
+				79E14F7B2123FA46001736B0 /* func.list */,
+				79E14F762123D6AB001736B0 /* DecodeStringlist.list */,
+				79E14F772123D6AC001736B0 /* DecodeStringMethod.list */,
+				79F2E8E3211D2F3900B6E7C1 /* FirstScript.sh */,
+				792BD4D22121911400C86064 /* replace.sh */,
+				792BD4D52122702800C86064 /* restore.sh */,
+				79F2E8E1211D242000B6E7C1 /* confuse.sh */,
+			);
+			path = sh;
 			sourceTree = "<group>";
 		};
 		8CCF5BF4F0323B4866205FEC /* Pods */ = {
@@ -288,7 +296,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79E9BEC6211D41A60035D1C6 /* DecodeStringlist.list in Resources */,
 				799208E121106B38009C9DAB /* LaunchScreen.storyboard in Resources */,
 				799209022111A5E8009C9DAB /* function.txt in Resources */,
 				799208DE21106B38009C9DAB /* Assets.xcassets in Resources */,
@@ -311,7 +318,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "$PROJECT_DIR/$PROJECT_NAME/replace.sh\n";
+			shellScript = "$PROJECT_DIR/$PROJECT_NAME/sh/replace.sh\n";
 		};
 		792BD4DA2122704700C86064 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -324,7 +331,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "$PROJECT_DIR/$PROJECT_NAME/restore.sh\n";
+			shellScript = "$PROJECT_DIR/$PROJECT_NAME/sh/restore.sh\n";
 		};
 		79F2E8E0211D1EE800B6E7C1 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -337,7 +344,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "$PROJECT_DIR/$PROJECT_NAME/confuse.sh\n$PROJECT_DIR/$PROJECT_NAME/FirstScript.sh\n";
+			shellScript = "$PROJECT_DIR/$PROJECT_NAME/sh/confuse.sh\n$PROJECT_DIR/$PROJECT_NAME/sh/FirstScript.sh\n";
 		};
 		98264744D65049B1A4E8D692 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -370,6 +377,7 @@
 				799208EE21106B69009C9DAB /* LSAW_model.m in Sources */,
 				799208F921106DB2009C9DAB /* MSKeyChain.m in Sources */,
 				799208EF21106B69009C9DAB /* LSAP_model.m in Sources */,
+				79E14F742123D15F001736B0 /* CRC.c in Sources */,
 				799208FE211186E4009C9DAB /* AppsCell.m in Sources */,
 				799208F521106BA6009C9DAB /* NSUserDefaults+extension.m in Sources */,
 				799208F421106BA6009C9DAB /* NSString+base64.m in Sources */,
@@ -554,6 +562,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AC3QX9VJ78;
+				GCC_INPUT_FILETYPE = sourcecode.c.objc;
 				GCC_PREFIX_HEADER = GetAllAppsDemo/GetAllAppsDemo.pch;
 				INFOPLIST_FILE = GetAllAppsDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -576,6 +585,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AC3QX9VJ78;
+				GCC_INPUT_FILETYPE = sourcecode.c.objc;
 				GCC_PREFIX_HEADER = GetAllAppsDemo/GetAllAppsDemo.pch;
 				INFOPLIST_FILE = GetAllAppsDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

@@ -1,13 +1,12 @@
 #!/usr/bin/env bash
 
 TABLENAME=symbols
-CONFUSE_FILE="$PROJECT_DIR/$PROJECT_NAME/Module/ViewController.m"
+CONFUSE_FILE="$PROJECT_DIR/$PROJECT_NAME/Module/"
 HEAD_FILE="$PROJECT_DIR/$PROJECT_NAME/DecodeString.h"
 STRING_SYMBOL_FILE="$PROJECT_DIR/$PROJECT_NAME/DecodeStringlist.list"
 filename="$PROJECT_DIR/$PROJECT_NAME/testFileName.list"
 otherfilename="$PROJECT_DIR/$PROJECT_NAME/otherfilename.list"
 DecodeStringMethod="$PROJECT_DIR/$PROJECT_NAME/DecodeStringMethod.list"
-tropStringMethod="$PROJECT_DIR/$PROJECT_NAME/tropStringMethod.list"
 
 export LC_CTYPE=C
 
@@ -16,7 +15,7 @@ export LC_CTYPE=C
 
 #rgrep  -h -r  "@\"" $CONFUSE_FILE --include '*.[m]' >$STRING_SYMBOL_FILE
 
-grep -h -r -I  "@\"[0-9A-Za-z/]" $CONFUSE_FILE --include '*.[m]'| sed "s/.*\(@\".*\"\).*/\1/g" | sort | uniq |sed "/^$/d"  >$STRING_SYMBOL_FILE
+grep -h -r -I  "@\"[^%s][0-9A-Za-z.#\/%]" $CONFUSE_FILE --include '*.[m]'| sed "s/.*\(@\".*\"\).*/\1/g" | sort | uniq |sed "/^$/d"  >$STRING_SYMBOL_FILE
 #grep -h -r -I   $CONFUSE_FILE --include '*.[m]' |sed "s/*@/@/g"   >$STRING_SYMBOL_FILE
 
 #grep -h -r -I  "^[-+]" $CONFUSE_FILE  --include '*.[mh]' >$STRING_SYMBOL_FILE
@@ -73,13 +72,12 @@ randomStr=$ramdom
 echo "$randomStr" >> $DecodeStringMethod
 echo "/*$**/static char $randomStr[]  = { ${strrr:1:${#strrr}-1} };" >> $HEAD_FILE
 }
-"" > $tropStringMethod
 
 touch $HEAD_FILE
 cat "$STRING_SYMBOL_FILE" | while read  line; do
 if [[ ! -z "$line" ]]; then
 ramdom=`ramdomString`
-echo $line | sed 's#\"#\\"#g ; s#\/#\\/#g' >> $tropStringMethod
+
 getCString ${line:2:${#line}-3}
 fi
 
