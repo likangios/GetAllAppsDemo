@@ -26,10 +26,15 @@
 #define XOR_KEY 0xBB
 
 @implementation ViewController
-
+- (void)requestData:(void(^)())block{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSLog(@"request data");
+        block();
+    });
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     NSString *token = [self toeknNew_key];
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {

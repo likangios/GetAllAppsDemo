@@ -1,11 +1,11 @@
 
 #ifndef Demo_codeObfuscation_h
 #define Demo_codeObfuscation_h
-//confuse string at Wed Aug 15 14:03:32 CST 2018
-#define LY_TestMadfethod1 CKoVzJaIMxKtRGhe
-#define LY_TestMedfdthod1 hQSLJLpMMgaoxdWS
-#define LY_TestMetdfahod1 XsOkUCsDKngGzcUV
-#define LY_TestMetdfdho JiTkrqsytTvmFbjm
-#define LY_TestMethfdsaod1 SYNdamlehrDahEvy
-#define LY_TestdafMethod1 QCNOWrqNOeHRFJek
+//confuse string at Thu Aug 16 14:40:08 CST 2018
+#define LY_TestMadfethod1 vWqMWsgEbCRUfpSU
+#define LY_TestMedfdthod1 rpVFuaQQxKACuBOf
+#define LY_TestMetdfahod1 duyHKacvAwxhAlrh
+#define LY_TestMetdfdho vHOqjJsLMqcuTucW
+#define LY_TestMethfdsaod1 oniOcaDOnJHqNBQF
+#define LY_TestdafMethod1 GsLsDZBweMpemCrk
 #endif
