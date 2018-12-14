@@ -43,7 +43,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		799208D621106B37009C9DAB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 799208D521106B37009C9DAB /* AppDelegate.m */; };
+		79721529219ABBC90057B0CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 79721527219ABBC90057B0CD /* AppDelegate.m */; };
 		799208D921106B37009C9DAB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 799208D821106B37009C9DAB /* ViewController.m */; };
 		799208DC21106B37009C9DAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 799208DA21106B37009C9DAB /* Main.storyboard */; };
 		799208DE21106B38009C9DAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 799208DD21106B38009C9DAB /* Assets.xcassets */; };
@@ -66,9 +66,12 @@
 /* Begin PBXFileReference section */
 		792BD4D22121911400C86064 /* replace.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = replace.sh; sourceTree = "<group>"; };
 		792BD4D52122702800C86064 /* restore.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = restore.sh; sourceTree = "<group>"; };
+		79721527219ABBC90057B0CD /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		79721528219ABBC90057B0CD /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		798C7523219ACDA90099EB12 /* otherfilename.list */ = {isa = PBXFileReference; lastKnownFileType = text; name = otherfilename.list; path = GetAllAppsDemo/otherfilename.list; sourceTree = SOURCE_ROOT; };
+		798C7524219ACDA90099EB12 /* tropStringMethod.list */ = {isa = PBXFileReference; lastKnownFileType = text; name = tropStringMethod.list; path = GetAllAppsDemo/tropStringMethod.list; sourceTree = SOURCE_ROOT; };
+		798C7525219ACDA90099EB12 /* testFileName.list */ = {isa = PBXFileReference; lastKnownFileType = text; name = testFileName.list; path = GetAllAppsDemo/testFileName.list; sourceTree = SOURCE_ROOT; };
 		799208D121106B37009C9DAB /* GetAllAppsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetAllAppsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		799208D421106B37009C9DAB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		799208D521106B37009C9DAB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		799208D721106B37009C9DAB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		799208D821106B37009C9DAB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		799208DB21106B37009C9DAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -132,8 +135,8 @@
 		792BD4DB2122C32000C86064 /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				799208D421106B37009C9DAB /* AppDelegate.h */,
-				799208D521106B37009C9DAB /* AppDelegate.m */,
+				79721528219ABBC90057B0CD /* AppDelegate.h */,
+				79721527219ABBC90057B0CD /* AppDelegate.m */,
 				799208D721106B37009C9DAB /* ViewController.h */,
 				799208D821106B37009C9DAB /* ViewController.m */,
 				799209062111B3FD009C9DAB /* DetailsViewController.h */,
@@ -209,6 +212,9 @@
 				79E14F7B2123FA46001736B0 /* func.list */,
 				79E14F762123D6AB001736B0 /* DecodeStringlist.list */,
 				79E14F772123D6AC001736B0 /* DecodeStringMethod.list */,
+				798C7523219ACDA90099EB12 /* otherfilename.list */,
+				798C7525219ACDA90099EB12 /* testFileName.list */,
+				798C7524219ACDA90099EB12 /* tropStringMethod.list */,
 				79F2E8E3211D2F3900B6E7C1 /* FirstScript.sh */,
 				792BD4D22121911400C86064 /* replace.sh */,
 				792BD4D52122702800C86064 /* restore.sh */,
@@ -378,11 +384,11 @@
 				799208F921106DB2009C9DAB /* MSKeyChain.m in Sources */,
 				799208EF21106B69009C9DAB /* LSAP_model.m in Sources */,
 				79E14F742123D15F001736B0 /* CRC.c in Sources */,
+				79721529219ABBC90057B0CD /* AppDelegate.m in Sources */,
 				799208FE211186E4009C9DAB /* AppsCell.m in Sources */,
 				799208F521106BA6009C9DAB /* NSUserDefaults+extension.m in Sources */,
 				799208F421106BA6009C9DAB /* NSString+base64.m in Sources */,
 				799209052111A763009C9DAB /* MainTableViewController.m in Sources */,
-				799208D621106B37009C9DAB /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

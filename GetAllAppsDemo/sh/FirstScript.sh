@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 TABLENAME=symbols
-CONFUSE_FILE="$PROJECT_DIR/$PROJECT_NAME/Module/"
+CONFUSE_FILE="$PROJECT_DIR/$PROJECT_NAME/Module/*"
 HEAD_FILE="$PROJECT_DIR/$PROJECT_NAME/DecodeString.h"
 STRING_SYMBOL_FILE="$PROJECT_DIR/$PROJECT_NAME/DecodeStringlist.list"
 filename="$PROJECT_DIR/$PROJECT_NAME/testFileName.list"
@@ -10,6 +10,7 @@ DecodeStringMethod="$PROJECT_DIR/$PROJECT_NAME/DecodeStringMethod.list"
 
 export LC_CTYPE=C
 
+#提取字符串
 #取以.m或.h结尾的文件以+号或-号开头的行 |去掉所有+号或－号|用空格代替符号|n个空格跟着<号 替换成 <号|开头不能是IBAction|用空格split字串取第二部分|排序|去重复|删除空行|删掉以init开头的行>写进func.list
 # "/.*?(@\".*?\")/i"
 

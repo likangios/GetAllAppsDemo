@@ -28,6 +28,22 @@
     }];
     return muString;
 }
+- (NSString *)replaceString2{
+    NSMutableString *muString = [NSMutableString stringWithString:self];
+    NSArray *currentStrings = @[@"-",@"_",@"c",@"e",@"#",@"x",@"z",
+                                @"#",@"C",@"E",@"#",@"X",@"Z",@"#",];
+    currentStrings = [[currentStrings reverseObjectEnumerator] allObjects];
+    
+    NSArray *withStrings = @[@"+",@"/",@"#",@"c",@"e",@"#",@"x",
+                             @"z",@"#",@"C",@"E",@"#",@"X",@"Z",];
+    withStrings = [[withStrings reverseObjectEnumerator] allObjects];
+    
+    [withStrings enumerateObjectsUsingBlock:^(NSString * obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [muString replaceOccurrencesOfString:obj withString:currentStrings[idx] options:2 range:NSMakeRange(0, muString.length)];
+    }];
+    return muString;
+    
+}
 - (NSString *)URLDecode{
     NSString *decodedString  = (__bridge_transfer NSString *)CFURLCreateStringByReplacingPercentEscapesUsingEncoding(NULL,
 (__bridge CFStringRef)self,

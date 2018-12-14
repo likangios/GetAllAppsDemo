@@ -47,7 +47,10 @@
     NSString *str = @"hello world";
     NSString *test = @"123123";
     NSLog(test);
+    
+    NSString *wode = [@"==+%@dfdsa<<<%@" base64Encode];
     NSLog(@"===+%@dfdsa<<<%@",str,test);
+
 }
 - (UITableView *)tableView{
     if (!_tableView) {
@@ -64,7 +67,7 @@
     NSArray *item = model.allItems;
     _dataArray = [NSMutableArray array];
     [item enumerateObjectsUsingBlock:^(LSAP_model *obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        
+        NSString *sdfa = @"dafdsafdsaf";
         if ([self.tabBarItem.title isEqualToString:@"我的"]) {
             if (![obj.identifier hasPrefix:@"com.apple"]) {
                 [self.dataArray addObject:obj];
